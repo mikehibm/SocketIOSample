@@ -46,6 +46,7 @@ public class MainActivity extends Activity {
     }
 
     private void connect() throws MalformedURLException{
+		System.setProperty("java.net.preferIPv6Addresses", "false");
 		socket = new SocketIO("http://10.0.2.2:3000/");
 		socket.connect(iocallback);
     }
